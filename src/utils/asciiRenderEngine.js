@@ -929,3 +929,4 @@ export class AsciiRenderer {
     this.applyLights(w, h);
   }
 }
+

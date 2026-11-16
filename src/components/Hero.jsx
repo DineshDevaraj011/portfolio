@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { fadeUp, staggerContainer, scaleIn, viewportOptions } from '../animations';
 import ElectricGazeBackground from './ElectricGazeBackground';
+import { ConstellationField } from './ui/constellation-field';
 import './Hero.css';
 
 /* ── Animated counter ── */
@@ -17,6 +19,8 @@ function Counter({ value, suffix = '' }) {
 }
 
 export default function Hero() {
+  const [bgMode, setBgMode] = useState('constellation'); // 'constellation' | 'electric' | 'both'
+
   const scrollTo = (id) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -24,8 +28,54 @@ export default function Hero() {
 
   return (
     <section id="home" className="hero">
+      {/* Background Switcher (Constellation Field / Electric Gaze) */}
+      <div className="bg-switcher">
+        <button
+          type="button"
+          className={`bg-switcher-btn ${bgMode === 'constellation' ? 'active' : ''}`}
+          onClick={() => setBgMode('constellation')}
+          title="Constellation Field (Meng To)"
+        >
+          ✨ Constellation
+        </button>
+        <button
+          type="button"
+          className={`bg-switcher-btn ${bgMode === 'electric' ? 'active' : ''}`}
+          onClick={() => setBgMode('electric')}
+          title="Electric Gaze ASCII/Dither"
+        >
+          ⚡ Electric Gaze
+        </button>
+        <button
+          type="button"
+          className={`bg-switcher-btn ${bgMode === 'both' ? 'active' : ''}`}
+          onClick={() => setBgMode('both')}
+          title="Layer Both Effects"
+        >
+          🌌 Both
+        </button>
+      </div>
+
+      {/* 21st.dev Constellation Field by Meng To */}
+      {(bgMode === 'constellation' || bgMode === 'both') && (
+        <ConstellationField
+          variant="constellation"
+          mode="dark"
+          speed={1.0}
+          size={1.1}
+          density={1.2}
+          opacity={bgMode === 'both' ? 0.75 : 0.95}
+          interactive={true}
+        />
+      )}
+
       {/* 21st.dev Electric Gaze Canvas2D ASCII / Dither Engine */}
-      <ElectricGazeBackground sourceUrl="/ascii-editor/demos/generated/ref-002.webp" />
+      {(bgMode === 'electric' || bgMode === 'both') && (
+        <ElectricGazeBackground
+          sourceUrl="/ascii-editor/demos/generated/ref-002.webp"
+          className={bgMode === 'both' ? 'opacity-70' : ''}
+        />
+      )}
 
       {/* Animated background blobs */}
       <motion.div
