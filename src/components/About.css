@@ -1,0 +1,139 @@
+.about {
+  background: var(--bg-secondary);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Avatar */
+.about-avatar-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  animation: fadeInUp 0.8s ease both;
+}
+
+.avatar-ring {
+  position: relative;
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  background: var(--gradient);
+  padding: 4px;
+  animation: spin 8s linear infinite;
+  box-shadow: var(--glow);
+}
+
+.avatar {
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  background: var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: spin 8s linear infinite reverse;
+}
+
+.avatar-emoji {
+  font-size: 5rem;
+  animation: spin 8s linear infinite;
+}
+
+.avatar-badge {
+  background: var(--gradient);
+  color: #fff;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Content */
+.about-content {
+  animation: fadeInUp 0.8s 0.2s ease both;
+}
+
+.about-heading {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.hl {
+  color: var(--accent);
+}
+
+.about-text {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.about-text strong {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.about-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 28px 0 32px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 18px;
+  transition: all 0.3s;
+}
+
+.info-item:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 20px rgba(108,99,255,0.15);
+}
+
+.info-icon {
+  font-size: 1.4rem;
+}
+
+.info-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .about-info-grid {
+    grid-template-columns: 1fr;
+  }
+  .info-item { justify-content: flex-start; text-align: left; }
+  .about-actions { text-align: center; }
+  .about-heading { text-align: center; }
+}
+
