@@ -148,7 +148,9 @@ body {
 
 /* Cards */
 .card {
-  background: var(--bg-card);
+  background: rgba(26, 26, 46, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--border);
   border-radius: 20px;
   padding: 32px;

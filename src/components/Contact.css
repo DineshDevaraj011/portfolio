@@ -1,5 +1,5 @@
 .contact {
-  background: var(--bg-primary);
+  background: transparent;
 }
 
 .contact-grid {
@@ -33,7 +33,9 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  background: var(--bg-card);
+  background: rgba(26, 26, 46, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 16px 20px;

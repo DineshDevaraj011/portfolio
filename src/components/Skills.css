@@ -1,5 +1,5 @@
 .skills {
-  background: var(--bg-primary);
+  background: transparent;
 }
 
 /* Tabs */
@@ -16,7 +16,9 @@
   align-items: center;
   gap: 6px;
   padding: 10px 22px;
-  background: var(--bg-card);
+  background: rgba(26, 26, 46, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--border);
   border-radius: 50px;
   color: var(--text-secondary);
@@ -49,7 +51,9 @@
 }
 
 .skill-item {
-  background: var(--bg-card);
+  background: rgba(26, 26, 46, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 20px 24px;
