@@ -22,17 +22,17 @@ const projects = [
   {
     title: 'Student Result Management System',
     description:
-      'A comprehensive student result management platform built with the MERN stack. Allows administrators to manage students, subjects, and publish results, while students can securely log in and view their academic performance.',
-    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'REST API'],
-    emoji: '🎓',
+      'A comprehensive student result management application developed in Python with SQL database integration. Enables administrators to manage student records, subject curricula, and compute semester results with automated grading calculations.',
+    tags: ['Python', 'SQL', 'Database Management', 'CRUD Operations', 'OOP'],
+    emoji: '🐍',
     github: 'https://github.com/Zenitsu121-oss/student-result-management.git',
     live: null,
     color: '#43e97b',
     highlights: [
-      '📊 Result Entry & Grade Management',
-      '👩‍🎓 Student & Admin Portals',
-      '🔐 Secure JWT Authentication',
-      '📋 Subject & Marks Tracking',
+      '📊 Result Processing & Grade Calculation',
+      '👩‍🎓 Student Records & Subject Management',
+      '💾 SQL Database Persistence',
+      '⚡ Modular Object-Oriented Design',
     ],
   },
 ];

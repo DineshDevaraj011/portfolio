@@ -1,16 +1,38 @@
-# React + Vite
+# Dinesh | Full Stack Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern, responsive, animated developer portfolio built using React, Vite, and Framer Motion.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+- [Live Portfolio](https://healthcare-tech-db65.vercel.app) *(or your deployed portfolio link)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tech Stack
+- **Frontend:** React.js, JavaScript, HTML5, CSS3, Framer Motion
+- **Backend:** Node.js, Express.js, Python
+- **Database:** MongoDB, Mongoose, SQL
+- **DevOps & Tools:** Git, GitHub, Postman, GCP, DigitalOcean, Vite
 
-## React Compiler
+## 📁 Projects Featured
+1. **HealthCare – Hospital Management System** (MERN Stack)
+   - [GitHub Repo](https://github.com/Zenitsu121-oss/Healthcare.git) | [Live Demo](https://healthcare-tech-db65.vercel.app)
+2. **Student Result Management System** (Python + SQL)
+   - [GitHub Repo](https://github.com/Zenitsu121-oss/student-result-management.git)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 💻 Local Development Setup
+```bash
+# Clone the repository
+git clone https://github.com/Zenitsu121-oss/portfolio.git
 
-## Expanding the Oxlint configuration
+# Navigate to project directory
+cd portfolio
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+# Install dependencies
+npm install
+
+# Start local dev server
+npm run dev
+```
+
+## 🏗️ Build for Production
+```bash
+npm run build
+```

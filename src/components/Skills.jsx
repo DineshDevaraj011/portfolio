@@ -20,6 +20,7 @@ const categories = [
     skills: [
       { name: 'Node.js',    level: 85, icon: '🟢' },
       { name: 'Express.js', level: 82, icon: '🚂' },
+      { name: 'Python',     level: 80, icon: '🐍' },
     ],
   },
   {
@@ -51,6 +52,7 @@ const techList = [
   'CSS3',
   'Node.js',
   'Express.js',
+  'Python',
   'MongoDB',
   'Mongoose',
   'SQL',
