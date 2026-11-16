@@ -11,12 +11,13 @@ const projects = [
     emoji: '🏥',
     github: 'https://github.com/Zenitsu121-oss/Healthcare.git',
     live: 'https://healthcare-tech-db65.vercel.app',
+    backend: 'https://healthcare-3-3opu.onrender.com',
     color: '#6c63ff',
     highlights: [
       '🔐 Role-based Access (Admin / Doctor / Patient)',
       '📅 Appointment Booking System',
-      '👨‍⚕️ Doctor Management Dashboard',
-      '🌐 Deployed on Vercel',
+      '🌐 Frontend: Deployed on Vercel',
+      '☁️ Backend API: Live on Render',
     ],
   },
   {
@@ -113,12 +114,25 @@ export default function Projects() {
                         whileHover={{ scale: 1.05, x: 4 }}
                         whileTap={{ scale: 0.96 }}
                       >
-                        🚀 Live Demo
+                        🚀 Live Demo (Vercel)
                       </motion.a>
                     ) : (
                       <motion.span className="project-link project-link-wip" variants={scaleIn}>
                         🔧 Coming Soon
                       </motion.span>
+                    )}
+                    {p.backend && (
+                      <motion.a
+                        href={p.backend}
+                        className="project-link project-link-backend"
+                        target="_blank"
+                        rel="noreferrer"
+                        variants={scaleIn}
+                        whileHover={{ scale: 1.05, x: 4 }}
+                        whileTap={{ scale: 0.96 }}
+                      >
+                        ⚙️ Live API (Render)
+                      </motion.a>
                     )}
                   </motion.div>
                 </motion.div>

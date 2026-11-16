@@ -173,6 +173,17 @@
   background: rgba(67,233,123,0.08);
 }
 
+.project-link-backend {
+  border-color: rgba(60, 166, 255, 0.35);
+  color: #3ca6ff;
+}
+
+.project-link-backend:hover {
+  border-color: #3ca6ff;
+  color: #3ca6ff;
+  background: rgba(60, 166, 255, 0.1);
+}
+
 .project-link-wip {
   border-color: rgba(249,168,37,0.3);
   color: #f9a825;

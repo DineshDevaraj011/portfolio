@@ -13,7 +13,7 @@ A modern, responsive, animated developer portfolio built using React, Vite, and 
 
 ## 📁 Projects Featured
 1. **HealthCare – Hospital Management System** (MERN Stack)
-   - [GitHub Repo](https://github.com/Zenitsu121-oss/Healthcare.git) | [Live Demo](https://healthcare-tech-db65.vercel.app)
+   - [GitHub Repo](https://github.com/Zenitsu121-oss/Healthcare.git) | [Live Demo (Vercel)](https://healthcare-tech-db65.vercel.app) | [Live API (Render)](https://healthcare-3-3opu.onrender.com)
 2. **Student Result Management System** (Python + SQL)
    - [GitHub Repo](https://github.com/Zenitsu121-oss/student-result-management.git)
 
