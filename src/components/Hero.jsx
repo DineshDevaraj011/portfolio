@@ -1,79 +1,7 @@
-import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { fadeUp, staggerContainer, scaleIn, viewportOptions } from '../animations';
+import ElectricGazeBackground from './ElectricGazeBackground';
 import './Hero.css';
-
-/* ── Particle canvas ── */
-function Particles() {
-  const canvasRef = useRef(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
-    let animId;
-
-    const resize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-    resize();
-    window.addEventListener('resize', resize);
-
-    const COUNT = 55;
-    const dots = Array.from({ length: COUNT }, () => ({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      r: Math.random() * 1.8 + 0.4,
-      vx: (Math.random() - 0.5) * 0.35,
-      vy: (Math.random() - 0.5) * 0.35,
-      alpha: Math.random() * 0.5 + 0.1,
-    }));
-
-    const draw = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      // Draw connection lines
-      for (let i = 0; i < dots.length; i++) {
-        for (let j = i + 1; j < dots.length; j++) {
-          const dx = dots[i].x - dots[j].x;
-          const dy = dots[i].y - dots[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 130) {
-            ctx.beginPath();
-            ctx.strokeStyle = `rgba(108,99,255,${0.15 * (1 - dist / 130)})`;
-            ctx.lineWidth = 0.6;
-            ctx.moveTo(dots[i].x, dots[i].y);
-            ctx.lineTo(dots[j].x, dots[j].y);
-            ctx.stroke();
-          }
-        }
-      }
-
-      // Draw dots
-      dots.forEach((d) => {
-        ctx.beginPath();
-        ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(108,99,255,${d.alpha})`;
-        ctx.fill();
-
-        d.x += d.vx;
-        d.y += d.vy;
-        if (d.x < 0 || d.x > canvas.width) d.vx *= -1;
-        if (d.y < 0 || d.y > canvas.height) d.vy *= -1;
-      });
-
-      animId = requestAnimationFrame(draw);
-    };
-    draw();
-
-    return () => {
-      cancelAnimationFrame(animId);
-      window.removeEventListener('resize', resize);
-    };
-  }, []);
-
-  return <canvas ref={canvasRef} className="particle-canvas" />;
-}
 
 /* ── Animated counter ── */
 function Counter({ value, suffix = '' }) {
@@ -96,7 +24,8 @@ export default function Hero() {
 
   return (
     <section id="home" className="hero">
-      <Particles />
+      {/* 21st.dev Electric Gaze Canvas2D ASCII / Dither Engine */}
+      <ElectricGazeBackground sourceUrl="/ascii-editor/demos/generated/ref-002.webp" />
 
       {/* Animated background blobs */}
       <motion.div
