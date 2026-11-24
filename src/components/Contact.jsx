@@ -4,10 +4,10 @@ import { fadeUp, slideLeft, slideRight, staggerContainer, scaleIn, viewportOptio
 import './Contact.css';
 
 const channels = [
-  { icon: '📧', label: 'Email',    value: 'dinesh@example.com',      href: 'mailto:dinesh@example.com' },
-  { icon: '💼', label: 'LinkedIn', value: 'linkedin.com/in/dinesh',   href: '#' },
-  { icon: '🐙', label: 'GitHub',   value: 'github.com/dinesh',        href: '#' },
-  { icon: '🐦', label: 'Twitter',  value: '@dinesh_dev',               href: '#' },
+  { icon: '📧', label: 'Email',    value: 'dineshdevaraj011@gmail.com',         href: 'mailto:dineshdevaraj011@gmail.com' },
+  { icon: '💼', label: 'LinkedIn', value: 'linkedin.com/in/dinesh-d-a555b72b4',  href: 'https://www.linkedin.com/in/dinesh-d-a555b72b4' },
+  { icon: '🐙', label: 'GitHub',   value: 'github.com/Zenitsu121-oss',        href: 'https://github.com/Zenitsu121-oss' },
+  { icon: '📍', label: 'Location', value: 'Tirupur, Tamil Nadu',             href: 'https://maps.google.com/?q=Tirupur,Tamil+Nadu' },
 ];
 
 export default function Contact() {

@@ -126,6 +126,13 @@
   margin-top: 2px;
 }
 
+.about-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 @media (max-width: 768px) {
   .about-grid {
     grid-template-columns: 1fr;
@@ -135,7 +142,7 @@
     grid-template-columns: 1fr;
   }
   .info-item { justify-content: flex-start; text-align: left; }
-  .about-actions { text-align: center; }
+  .about-actions { justify-content: center; }
   .about-heading { text-align: center; }
 }
 

@@ -3,10 +3,9 @@ import { staggerContainer, scaleIn, fadeUp, viewportOptions } from '../animation
 import './Footer.css';
 
 const socials = [
-  { label: 'GitHub',   icon: '🐙', href: '#' },
-  { label: 'LinkedIn', icon: '💼', href: '#' },
-  { label: 'Twitter',  icon: '🐦', href: '#' },
-  { label: 'Email',    icon: '📧', href: 'mailto:dinesh@example.com' },
+  { label: 'GitHub',   icon: '🐙', href: 'https://github.com/Zenitsu121-oss' },
+  { label: 'LinkedIn', icon: '💼', href: 'https://www.linkedin.com/in/dinesh-d-a555b72b4' },
+  { label: 'Email',    icon: '📧', href: 'mailto:dineshdevaraj011@gmail.com' },
 ];
 
 export default function Footer() {

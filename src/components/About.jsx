@@ -39,15 +39,6 @@ export default function About() {
                 <span className="avatar-emoji">👨‍💻</span>
               </div>
             </motion.div>
-            <motion.div
-              className="avatar-badge"
-              variants={scaleIn}
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewportOptions}
-            >
-              MERN Dev
-            </motion.div>
           </motion.div>
 
           {/* Content column */}
@@ -83,10 +74,10 @@ export default function About() {
               viewport={viewportOptions}
             >
               {[
-                { icon: '🎓', label: 'Education',  value: 'B.Sc Computer Science' },
-                { icon: '📍', label: 'Location',   value: 'India' },
-                { icon: '💼', label: 'Experience', value: 'Fresher' },
-                { icon: '🌐', label: 'Available',  value: 'Remote & On-site' },
+                { icon: '🎓', label: 'Education',  value: 'B.Sc Computer Science (CGPA: 8.6)' },
+                { icon: '📍', label: 'Location',   value: 'Tirupur, Tamil Nadu' },
+                { icon: '💼', label: 'Experience', value: 'Fresher · IT Bhoomi & IDM' },
+                { icon: '🌐', label: 'Available',  value: 'Full-Time & Remote' },
               ].map((item) => (
                 <motion.div
                   key={item.label}
@@ -107,12 +98,24 @@ export default function About() {
             <motion.div className="about-actions" variants={fadeUp} initial="hidden" whileInView="visible" viewport={viewportOptions}>
               <motion.a
                 className="btn btn-primary"
-                href="#"
-                download
+                href="/Dinesh_D_Resume.pdf"
+                download="Dinesh_D_Resume.pdf"
+                target="_blank"
+                rel="noreferrer"
                 whileHover={{ scale: 1.06, boxShadow: '0 12px 40px rgba(108,99,255,0.5)' }}
                 whileTap={{ scale: 0.96 }}
               >
-                📄 Download Resume
+                📥 Download Resume
+              </motion.a>
+              <motion.a
+                className="btn btn-outline"
+                href="/Dinesh_D_Resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+                whileHover={{ scale: 1.06 }}
+                whileTap={{ scale: 0.96 }}
+              >
+                👁️ View Resume
               </motion.a>
             </motion.div>
           </motion.div>
