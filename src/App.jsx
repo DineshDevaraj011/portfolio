@@ -8,8 +8,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import { ConstellationField } from './components/ui/constellation-field';
-import ElectricGazeBackground from './components/ElectricGazeBackground';
+import HalftoneNebula from './components/ui/halftone-nebula';
 
 function Loader() {
   return (
@@ -36,7 +35,7 @@ function Loader() {
 
 export default function App() {
   const [loading, setLoading] = useState(true);
-  const [bgMode, setBgMode] = useState('constellation'); // 'constellation' | 'electric' | 'both'
+  const [nebulaPreset, setNebulaPreset] = useState('crimson'); // 'crimson' | 'ultraviolet' | 'abyssal' | 'solar' | 'phosphor'
 
   useEffect(() => {
     const t = setTimeout(() => setLoading(false), 1500);
@@ -49,27 +48,15 @@ export default function App() {
         {loading && <Loader key="loader" />}
       </AnimatePresence>
 
-      {/* Global Animated Background covering all scrolling pages */}
+      {/* 21st.dev Halftone Nebula by Kedhareswer Naidu - Global Interactive Space Background */}
       <div className="global-background-container">
-        {(bgMode === 'constellation' || bgMode === 'both') && (
-          <ConstellationField
-            variant="constellation"
-            mode="dark"
-            speed={0.9}
-            size={1.1}
-            density={1.3}
-            opacity={bgMode === 'both' ? 0.65 : 0.95}
-            interactive={true}
-          />
-        )}
-
-        {(bgMode === 'electric' || bgMode === 'both') && (
-          <ElectricGazeBackground
-            sourceUrl="/ascii-editor/demos/generated/ref-002.webp"
-            className={bgMode === 'both' ? 'opacity-60' : ''}
-            interactive={false}
-          />
-        )}
+        <HalftoneNebula
+          height="100vh"
+          preset={nebulaPreset}
+          interactive={true}
+          touch="scroll"
+          className="w-full h-full"
+        />
       </div>
 
       {!loading && (
@@ -80,7 +67,7 @@ export default function App() {
           transition={{ duration: 0.4 }}
         >
           <Navbar />
-          <Hero bgMode={bgMode} setBgMode={setBgMode} />
+          <Hero nebulaPreset={nebulaPreset} setNebulaPreset={setNebulaPreset} />
           <About />
           <Skills />
           <Projects />

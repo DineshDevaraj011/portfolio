@@ -15,41 +15,36 @@ function Counter({ value, suffix = '' }) {
   );
 }
 
-export default function Hero({ bgMode = 'constellation', setBgMode }) {
+export default function Hero({ nebulaPreset = 'crimson', setNebulaPreset }) {
   const scrollTo = (id) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const presets = [
+    { id: 'crimson', label: '🔴 Crimson' },
+    { id: 'ultraviolet', label: '🟣 Ultraviolet' },
+    { id: 'abyssal', label: '🌊 Abyssal' },
+    { id: 'solar', label: '☀️ Solar' },
+    { id: 'phosphor', label: '🟢 Phosphor' },
+  ];
+
   return (
     <section id="home" className="hero">
-      {/* Background Switcher (Controls Global Background) */}
-      {setBgMode && (
+      {/* 21st.dev Halftone Nebula Preset Selector */}
+      {setNebulaPreset && (
         <div className="bg-switcher">
-          <button
-            type="button"
-            className={`bg-switcher-btn ${bgMode === 'constellation' ? 'active' : ''}`}
-            onClick={() => setBgMode('constellation')}
-            title="Constellation Field (Meng To)"
-          >
-            ✨ Constellation
-          </button>
-          <button
-            type="button"
-            className={`bg-switcher-btn ${bgMode === 'electric' ? 'active' : ''}`}
-            onClick={() => setBgMode('electric')}
-            title="Electric Gaze ASCII/Dither"
-          >
-            ⚡ Electric Gaze
-          </button>
-          <button
-            type="button"
-            className={`bg-switcher-btn ${bgMode === 'both' ? 'active' : ''}`}
-            onClick={() => setBgMode('both')}
-            title="Layer Both Effects"
-          >
-            🌌 Both
-          </button>
+          {presets.map((p) => (
+            <button
+              key={p.id}
+              type="button"
+              className={`bg-switcher-btn ${nebulaPreset === p.id ? 'active' : ''}`}
+              onClick={() => setNebulaPreset(p.id)}
+              title={`${p.label} Nebula Theme`}
+            >
+              {p.label}
+            </button>
+          ))}
         </div>
       )}
 
