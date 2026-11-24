@@ -3,10 +3,9 @@
 }
 
 .about-grid {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 60px;
-  align-items: center;
+  display: block;
+  max-width: 860px;
+  margin: 0 auto;
 }
 
 /* Avatar */
@@ -84,7 +83,7 @@
 
 .about-info-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 16px;
   margin: 28px 0 32px;
 }

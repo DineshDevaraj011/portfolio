@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { fadeUp, slideLeft, slideRight, staggerContainer, scaleIn, viewportOptions } from '../animations';
+import { fadeUp, staggerContainer, viewportOptions } from '../animations';
 import './About.css';
 
 export default function About() {
@@ -22,29 +22,10 @@ export default function About() {
         </motion.p>
 
         <div className="about-grid">
-          {/* Avatar column */}
-          <motion.div
-            className="about-avatar-wrap"
-            variants={slideLeft}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportOptions}
-          >
-            <motion.div
-              className="avatar-ring"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: 'spring', stiffness: 200 }}
-            >
-              <div className="avatar">
-                <span className="avatar-emoji">👨‍💻</span>
-              </div>
-            </motion.div>
-          </motion.div>
-
           {/* Content column */}
           <motion.div
             className="about-content"
-            variants={slideRight}
+            variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={viewportOptions}
