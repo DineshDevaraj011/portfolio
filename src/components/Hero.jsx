@@ -15,7 +15,7 @@ function Counter({ value, suffix = '' }) {
   );
 }
 
-export default function Hero({ nebulaPreset = 'crimson', setNebulaPreset }) {
+export default function Hero({ accretionPreset = 'crimson', setAccretionPreset }) {
   const scrollTo = (id) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -23,24 +23,24 @@ export default function Hero({ nebulaPreset = 'crimson', setNebulaPreset }) {
 
   const presets = [
     { id: 'crimson', label: '🔴 Crimson' },
-    { id: 'ultraviolet', label: '🟣 Ultraviolet' },
-    { id: 'abyssal', label: '🌊 Abyssal' },
-    { id: 'solar', label: '☀️ Solar' },
-    { id: 'phosphor', label: '🟢 Phosphor' },
+    { id: 'ember', label: '🌋 Ember' },
+    { id: 'glacier', label: '🧊 Glacier' },
+    { id: 'ash', label: '🌫️ Ash' },
+    { id: 'orchid', label: '🔮 Orchid' },
   ];
 
   return (
     <section id="home" className="hero">
-      {/* 21st.dev Halftone Nebula Preset Selector */}
-      {setNebulaPreset && (
+      {/* 21st.dev Etched Accretion Preset Selector */}
+      {setAccretionPreset && (
         <div className="bg-switcher">
           {presets.map((p) => (
             <button
               key={p.id}
               type="button"
-              className={`bg-switcher-btn ${nebulaPreset === p.id ? 'active' : ''}`}
-              onClick={() => setNebulaPreset(p.id)}
-              title={`${p.label} Nebula Theme`}
+              className={`bg-switcher-btn ${accretionPreset === p.id ? 'active' : ''}`}
+              onClick={() => setAccretionPreset(p.id)}
+              title={`${p.label} Accretion Theme`}
             >
               {p.label}
             </button>

@@ -8,7 +8,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import HalftoneNebula from './components/ui/halftone-nebula';
+import EtchedAccretion from './components/ui/etched-accretion';
 
 function Loader() {
   return (
@@ -35,7 +35,7 @@ function Loader() {
 
 export default function App() {
   const [loading, setLoading] = useState(true);
-  const [nebulaPreset, setNebulaPreset] = useState('crimson'); // 'crimson' | 'ultraviolet' | 'abyssal' | 'solar' | 'phosphor'
+  const [accretionPreset, setAccretionPreset] = useState('crimson'); // 'crimson' | 'ember' | 'glacier' | 'ash' | 'orchid'
 
   useEffect(() => {
     const t = setTimeout(() => setLoading(false), 1500);
@@ -48,13 +48,13 @@ export default function App() {
         {loading && <Loader key="loader" />}
       </AnimatePresence>
 
-      {/* 21st.dev Halftone Nebula by Kedhareswer Naidu - Global Interactive Space Background */}
+      {/* 21st.dev Etched Accretion by Kedhareswer Naidu - Global Interactive Black Hole Background */}
       <div className="global-background-container">
-        <HalftoneNebula
+        <EtchedAccretion
           height="100vh"
-          preset={nebulaPreset}
+          preset={accretionPreset}
           interactive={true}
-          touch="scroll"
+          renderScale={1}
           className="w-full h-full"
         />
       </div>
@@ -67,7 +67,7 @@ export default function App() {
           transition={{ duration: 0.4 }}
         >
           <Navbar />
-          <Hero nebulaPreset={nebulaPreset} setNebulaPreset={setNebulaPreset} />
+          <Hero accretionPreset={accretionPreset} setAccretionPreset={setAccretionPreset} />
           <About />
           <Skills />
           <Projects />
